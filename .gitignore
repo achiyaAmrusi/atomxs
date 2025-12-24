@@ -32,3 +32,6 @@ build/
 # IDE/project files
 *.swp
 .DS_Store
+
+library/endf/*.h5
+library/endf
