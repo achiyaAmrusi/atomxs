@@ -33,5 +33,6 @@ build/
 *.swp
 .DS_Store
 
-atomxs/library/endf71/**/*.h5
-atomxs/library/endf71
+# OpenMC / ENDF nuclear data
+atomxs/library/endfb71/
+atomxs/library/endfb71/**/*.h5
