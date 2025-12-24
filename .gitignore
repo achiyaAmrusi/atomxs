@@ -33,5 +33,5 @@ build/
 *.swp
 .DS_Store
 
-atomxs/library/endf/*.h5
-atomxs/library/endf
+atomxs/library/endf71/**/*.h5
+atomxs/library/endf71
