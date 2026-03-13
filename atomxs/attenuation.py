@@ -44,14 +44,14 @@ def mass_attenuation(material: Material, energy_grid=np.ndarray, mt_list=[501], 
                 method=interp_method,
             )
 
-    # convert material to atomic fractions (needed for weighting)
-    material_atomic = material.update_fraction_type("atomic")
+    # convert material to mass fractions (needed for weighting)
+    material_mass = material.update_fraction_type("mass")
 
     # initialize result arrays
     mu_over_rho = np.zeros_like(energy_grid)
 
-    # weight each isotope's Z cross section by its atomic fraction
-    for iso, frac in material_atomic.composition.items():
+    # weight each isotope's Z cross section by its mass fraction
+    for iso, frac in material_mass.composition.items():
         z_ind = material_z.index(iso.Z)
         # sum over MTs
         mu_el = attenuation_coeff_z[z_ind].sum(axis=0)  # shape (E,)
